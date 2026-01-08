@@ -1,8 +1,8 @@
 # syntax=docker/dockerfile:1
 
-FROM node:lts-alpine
+FROM python:3.11-slim
 WORKDIR /app
+COPY requirements.txt .
+RUN pip install -r requirements.txt
 COPY . .
-RUN yarn install --production
-CMD ["node", "src/index.js"]
-EXPOSE 3000
+CMD ["python", "main.py"]
