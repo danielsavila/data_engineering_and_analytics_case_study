@@ -6,7 +6,7 @@ load_dotenv()
 
 def transform(df: pd.DataFrame):
     #check for missing values in the first 5 float columns
-    if df.loc[:, :6].isnull().values.any():
+    if df.loc[:, "tasks":"costs"].isnull().values.any():
         df.fillna(0, inplace = True)
 
     #creating new columns

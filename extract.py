@@ -8,29 +8,31 @@ from sqlalchemy import create_engine
 import urllib
 load_dotenv()
 
-
 # authenticating azure blob storage connection
 credential = ClientSecretCredential(
     tenant_id=os.environ["AZURE_TENANT_ID"],
     client_id=os.environ["AZURE_CLIENT_ID"],
     client_secret=os.environ["AZURE_CLIENT_SECRET"]
-)
+    )
 
-# extract from azure blob storage
-print("connecting to blob storage")
 account_url = "https://azureblob101.blob.core.windows.net"
 
-#identifying the client    
-blob_service_client = BlobServiceClient(account_url, credential = credential)
+def extract():
+    # extract from azure blob storage
+    print("connecting to blob storage")
 
-#identifying the container
-container_name = "etl-project-raw-data"
-container_client = blob_service_client.get_container_client(container_name)
+    #identifying the client    
+    blob_service_client = BlobServiceClient(account_url, credential = credential)
 
-blob_client = container_client.get_blob_client("data.csv")
+    #identifying the container and blob
+    container_name = "etl-project-raw-data"
+    container_client = blob_service_client.get_container_client(container_name)
+    blob_client = container_client.get_blob_client("data.csv")
 
-blob_data = blob_client.download_blob().readall()
+    #stream this if file size is too large
+    blob_data = blob_client.download_blob().readall()
 
-df = pd.read_csv(io.BytesIO(blob_data))
-print("data extracted successfully")
-df.head()
+    df = pd.read_csv(io.BytesIO(blob_data))
+    print("data extracted successfully")
+    return df
+
