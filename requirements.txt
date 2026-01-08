@@ -1,0 +1,7 @@
+azure-identity==1.15.0
+azure-storage-blob == 12.26.0
+numpy==2.4.0
+pandas==2.3.3
+python-dotenv==1.2.1
+SQLAlchemy==2.0.45
+dotenv==1.0.0
