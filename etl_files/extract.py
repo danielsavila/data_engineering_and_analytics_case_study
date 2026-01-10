@@ -2,7 +2,7 @@ import os
 import pandas as pd
 import io
 from azure.identity import ClientSecretCredential
-from azure.storage.blob import BlobServiceClient, BlobClient, ContainerClient
+from azure.storage.blob import BlobServiceClient
 from dotenv import load_dotenv
 from sqlalchemy import create_engine
 import urllib
@@ -35,4 +35,3 @@ def extract():
     df = pd.read_csv(io.BytesIO(blob_data))
     print("data extracted successfully")
     return df
-

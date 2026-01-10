@@ -15,5 +15,5 @@ def transform(df: pd.DataFrame):
     
     #sorting values by date
     df = df.sort_values(by = "date")
-
+    print("data transformed successfully")
     return df

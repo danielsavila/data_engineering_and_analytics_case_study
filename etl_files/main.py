@@ -1,6 +1,6 @@
-from etl_files.extract import extract
-from etl_files.transform import transform
-from etl_files.load import load
+from extract import extract
+from transform import transform
+from load import load
 
 
 def main():
@@ -10,3 +10,5 @@ def main():
 
 if __name__ == "__main__":
     main()
+
+main()
