@@ -1,9 +1,5 @@
-import os
-import token
-import pyodbc
 import struct
 from azure.identity import DefaultAzureCredential
-import pandas as pd
 import urllib
 from sqlalchemy import create_engine
 
