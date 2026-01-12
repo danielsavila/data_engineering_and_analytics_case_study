@@ -3,7 +3,7 @@
 
 This repo contains a real case study of data engineering and analytics consulting work done for a client for Atlas Consulting LLC.
 
-The contents of this repo are organized in the following manner ...
+The contents of this repo are organized in the following manner...
 1. Historical Context and Problem
 2. Approach
 3. Files
@@ -60,4 +60,7 @@ We eliminated manual data entry errors, standardized their reporting, and allevi
 staff reported in interacting with the ERP front-end. We also improved the organizations data-informed decision
 making by visualizing their data in PowerBI. Department heads were able to better manage employee time,
 prioritize projects that were underutilized, and improve allocation of resources for employee professional
-development. 
+development. In leveraging Azure Container Resources and its Managed Identities functionality, we minimized
+cybersecurity concerns by implementing the container image in the organization's Azure Container Registry, 
+the container image's read/write authentication, and the PowerBI dashboard without increasing the number of 
+username/password combinations or employee access requirements.
