@@ -50,6 +50,9 @@ The documents included in this repo are the following...
    - Take in the extractred data and add two new columns
 4. load.py
    - Take transformed data, connect to an Azure SQL database, and load for storage.
+5. main.py
+   - Since the size of the data pull is relatively small, we perfoemd the ETL process in one function. Further improvements
+   - would include more detailed logging of events and an Airflow DAG to implemment retries...etc.
 5. Dockerfile
    - This dockerfile installs various system dependencies for retreiving Azure Entra ID token authentication, as well as
      ODBC drivers for connecting to the SQL database.
