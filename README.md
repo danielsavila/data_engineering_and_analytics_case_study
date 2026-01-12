@@ -43,7 +43,7 @@ To accomplish the above goals, I implemented the following...
 ## Files
 The documents included in this repo are the following...
 1. creating_synthetic_data.py
- - Creating a synthetic data set to move and manipulate. This file was manually uploded to Azure Blob Storage.
+   - Creating a synthetic data set to move and manipulate. This file was manually uploded to Azure Blob Storage.
 2. extract.py
    - For this case study's purposes, we extract from Azure Blob Storage to simulate extracting from the client's data lake.
 3. transform.py
